@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<!--<bean id = "greetingBean" class = "com.spring.Spring.Greeting" lazy-init="true"/>-->
+
+	<!--constructor injection for primitives-->
+	<!--<bean id="emp" class="com.constructorinjection.primitive.Employee">
+		<constructor-arg name="empId" value="101" />
+		<constructor-arg name="empName" value="shivu" />
+		<constructor-arg name="deptName" value="dev" />
+	</bean>-->
+
+	<!--constructor injection for reference-->
+	<!--<bean id = "course" class="com.constructorinjection.reference.Course">
+		<constructor-arg name="courseId" value="101"/>
+		<constructor-arg name="courseName" value="Java"/>
+	</bean>
+	<bean id = "student" class="com.constructorinjection.reference.Student">
+		<constructor-arg name="stuId" value="1001"/>
+		<constructor-arg name="stuName" value="Shivu"/>
+		<constructor-arg>
+			<ref bean="course"/>
+		</constructor-arg>
+	</bean>-->
+
+	<!--constructor injection for collection1-list of primitive-->
+	<!--<bean id = "stu" class="com.collection1.Student">
+		<constructor-arg name="stuId" value="101"/>
+		<constructor-arg name="stuName" value="Shivu"/>
+		<constructor-arg>
+			<list>
+				<value>Java</value>
+				<value>Web</value>
+				<value>Python</value>
+			</list>
+		</constructor-arg>
+	</bean>-->
+
+	<!--constructor injection for reference-->
+	<!--<bean id = "emp1" class="com.collection1.Employee">
+		<constructor-arg name="empId" value="101"/>
+		<constructor-arg name="empName" value="Shivu"/>
+	</bean>
+	<bean id = "emp2" class="com.collection1.Employee">
+		<constructor-arg name="empId" value="102"/>
+		<constructor-arg name="empName" value="Harsh"/>
+	</bean>
+	<bean id = "job" class="com.collection1.Job">
+		<constructor-arg name="jobId" value="1001"/>
+		<constructor-arg name="jobName" value="Dev"/>
+		<constructor-arg>
+			<list>
+			<ref bean="emp1"/>
+			<ref bean="emp2"/>
+			</list>
+		</constructor-arg>
+	</bean>-->
+
+	<!--setter injection for primitives-->
+	<!--<bean id="product" class="com.setterinjection.primitive.Product">
+		<property name="productId" value="101"/>
+		<property name="productName" value="Laptop"/>
+	</bean>-->
+
+	<!--setter injection for reference type -->
+	<!--<bean id="depart" class="com.setterinjection.reference.Department">
+		<property name="depId" value="101"/>
+		<property name="depName" value="dev"/>
+	</bean>
+	
+	<bean id="emp" class="com.setterinjection.reference.Employee">
+		<property name="empId" value="1001"/>
+		<property name="empName" value="Harsh"/>
+		<property name="department" ref="depart"/>
+	</bean>-->
+
+	<!--constructor injection for collection1-list of primitive-->
+	<!--<bean id = "product" class="com.setterinjection.collection.primitive.Product">
+		<property name="productId" value="101"/>
+		<property name="productCategory" value="Electronics"/>
+		<property name="products">
+			<list>
+				<value>Laptop</value>
+				<value>Mobile</value>
+				<value>Watch</value>
+			</list>
+		</property>
+	</bean>-->
+
+	<!--settrr injection for reference type -->
+	<!--<bean id="course1" class="com.setterinjection.collection.reference.Course">
+		<property name="courseId" value="1001" />
+		<property name="courseName" value="Java" />
+	</bean>
+	<bean id="course2" class="com.setterinjection.collection.reference.Course">
+		<property name="courseId" value="1002" />
+		<property name="courseName" value="Python" />
+	</bean>
+	<bean id="student" class="com.setterinjection.collection.reference.Student">
+		<property name="stuId" value="101" />
+		<property name="stuName" value="Harsh" />
+		<property name="course">
+			<list>
+				<ref bean="course1" />
+				<ref bean="course2" />
+			</list>
+		</property>
+	</bean>-->
+	
+	<!-- Bean Scope-->
+	<!--<bean id="vehicle" class="com.beanscope.Vehicle" scope="singleton"/>
+	<bean id="vehicle2" class="com.beanscope.Vehicle" scope="prototype"/>-->
+	
+	<!--Autowiring: byName-->
+	<!--<bean id="product" class="com.autowiring.Product">
+		<property name="productId" value="101"/> 
+		<property name="productName" value="Laptop"/> 
+	</bean>
+	<bean id="category" class="com.autowiring.Category" autowire="byName">
+		<property name="categoryId" value="1001"/>
+		<property name="categoryName" value="Electronics"/>
+	</bean>-->
+	
+	<!--Autowiring: byType-->
+	<!--<bean id="p1" class="com.autowiring.Product">
+		<property name="productId" value="101"/> 
+		<property name="productName" value="Laptop"/> 
+	</bean>
+	<bean id="category" class="com.autowiring.Category" autowire="byType">
+		<property name="categoryId" value="1001"/>
+		<property name="categoryName" value="Electronics"/>
+	</bean>-->
+	
+	<!--Spring bean life cycle-->
+	<!--<bean id="box" class="com.beanlifecycle.Box" init-method="init" destroy-method="destroy">
+		<property name="boxName" value="square"/>
+	</bean>-->
+	
+	<!--<bean id="box" class="com.beanlifecycle.Box">
+		<property name="boxName" value="square"/>
+	</bean>-->
+</beans>
